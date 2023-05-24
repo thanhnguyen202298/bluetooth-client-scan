@@ -1,0 +1,132 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3 Copyright 2013 The Android Open Source Project
+4
+5 Licensed under the Apache License, Version 2.0 (the "License");
+6 you may not use this file except in compliance with the License.
+7 You may obtain a copy of the License at
+8
+9     http://www.apache.org/licenses/LICENSE-2.0
+10
+11 Unless required by applicable law or agreed to in writing, software
+12 distributed under the License is distributed on an "AS IS" BASIS,
+13 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14 See the License for the specific language governing permissions and
+15 limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.example.android.bluetoothlegatt"
+19    android:versionCode="1"
+20    android:versionName="1.0" >
+21
+22    <uses-sdk
+23        android:minSdkVersion="26"
+23-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml
+24        android:targetSdkVersion="31" />
+24-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml
+25
+26    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
+27
+28
+29    <!--
+30    Declare this required feature if you want to make the app available to BLE-capable
+31    devices only.  If you want to make your app available to devices that don't support BLE,
+32    you should omit this in the manifest.  Instead, determine BLE capability by using
+33    PackageManager.hasSystemFeature(FEATURE_BLUETOOTH_LE)
+34    -->
+35    <uses-feature
+35-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:31:5-89
+36        android:name="android.hardware.bluetooth_le"
+36-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:31:19-63
+37        android:required="true" />
+37-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:31:64-87
+38
+39    <uses-permission android:name="android.permission.BLUETOOTH" />
+39-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:33:5-67
+39-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:33:22-65
+40    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+40-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:34:5-73
+40-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:34:22-71
+41    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+41-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:35:5-81
+41-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:35:22-78
+42    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+42-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:36:5-79
+42-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:36:22-76
+43    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMAN" />
+43-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:37:5-87
+43-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:37:22-84
+44    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+44-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:40:5-76
+44-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:40:22-73
+45    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+45-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:42:5-73
+45-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:42:22-70
+46
+47    <application
+47-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:44:5-57:19
+48        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+48-->[androidx.core:core:1.7.0] /Users/longqp/.gradle/caches/transforms-2/files-2.1/e3a25a6ab6fddcf1e2b54647ed5d5556/core-1.7.0/AndroidManifest.xml:24:18-86
+49        android:debuggable="true"
+50        android:extractNativeLibs="false"
+51        android:icon="@drawable/ic_launcher"
+51-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:45:9-45
+52        android:label="@string/app_name"
+52-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:44:18-50
+53        android:testOnly="true"
+54        android:theme="@android:style/Theme.Holo.Light" >
+54-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:46:9-56
+55        <activity
+55-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:47:9-54:20
+56            android:name="com.example.android.bluetoothlegatt.DeviceScanActivity"
+56-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:47:19-53
+57            android:exported="true"
+57-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:49:13-36
+58            android:label="@string/app_name" >
+58-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:48:13-45
+59            <intent-filter>
+59-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:50:13-53:29
+60                <action android:name="android.intent.action.MAIN" />
+60-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:51:17-68
+60-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:51:25-66
+61
+62                <category android:name="android.intent.category.LAUNCHER" />
+62-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:52:17-76
+62-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:52:27-74
+63            </intent-filter>
+64        </activity>
+65        <activity android:name="com.example.android.bluetoothlegatt.DeviceControlActivity" />
+65-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:55:9-58
+65-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:55:19-56
+66
+67        <service
+67-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:56:9-77
+68            android:name="com.example.android.bluetoothlegatt.BluetoothLeService"
+68-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:56:18-52
+69            android:enabled="true" />
+69-->/Users/longqp/Downloads/BluetoothLeGatt/Application/src/main/AndroidManifest.xml:56:53-75
+70
+71        <provider
+71-->[androidx.emoji2:emoji2:1.0.0] /Users/longqp/.gradle/caches/transforms-2/files-2.1/b8bee80b873f2845020c094d78908dd4/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+72            android:name="androidx.startup.InitializationProvider"
+72-->[androidx.emoji2:emoji2:1.0.0] /Users/longqp/.gradle/caches/transforms-2/files-2.1/b8bee80b873f2845020c094d78908dd4/emoji2-1.0.0/AndroidManifest.xml:27:13-67
+73            android:authorities="com.example.android.bluetoothlegatt.androidx-startup"
+73-->[androidx.emoji2:emoji2:1.0.0] /Users/longqp/.gradle/caches/transforms-2/files-2.1/b8bee80b873f2845020c094d78908dd4/emoji2-1.0.0/AndroidManifest.xml:28:13-68
+74            android:exported="false" >
+74-->[androidx.emoji2:emoji2:1.0.0] /Users/longqp/.gradle/caches/transforms-2/files-2.1/b8bee80b873f2845020c094d78908dd4/emoji2-1.0.0/AndroidManifest.xml:29:13-37
+75            <meta-data
+75-->[androidx.emoji2:emoji2:1.0.0] /Users/longqp/.gradle/caches/transforms-2/files-2.1/b8bee80b873f2845020c094d78908dd4/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+76                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+76-->[androidx.emoji2:emoji2:1.0.0] /Users/longqp/.gradle/caches/transforms-2/files-2.1/b8bee80b873f2845020c094d78908dd4/emoji2-1.0.0/AndroidManifest.xml:32:17-75
+77                android:value="androidx.startup" />
+77-->[androidx.emoji2:emoji2:1.0.0] /Users/longqp/.gradle/caches/transforms-2/files-2.1/b8bee80b873f2845020c094d78908dd4/emoji2-1.0.0/AndroidManifest.xml:33:17-49
+78            <meta-data
+78-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/longqp/.gradle/caches/transforms-2/files-2.1/07e953f5e31edeb519550c0d32dec9da/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+79                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+79-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/longqp/.gradle/caches/transforms-2/files-2.1/07e953f5e31edeb519550c0d32dec9da/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+80                android:value="androidx.startup" />
+80-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/longqp/.gradle/caches/transforms-2/files-2.1/07e953f5e31edeb519550c0d32dec9da/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+81        </provider>
+82    </application>
+83
+84</manifest>
